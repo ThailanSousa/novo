@@ -101,7 +101,7 @@ public class Cliente {
             switch (opcao) {
                 case 1:
                     System.out.println("\nREALIZAR CADASTRO");
-                    Cliente.cadastro();
+                    cliente = Cliente.cadastro(); //atribuir novo cliente ao objeto cliente
                     break;
                 case 2:
                     System.out.println("\nREALIZAR COMPRAS");
@@ -110,11 +110,7 @@ public class Cliente {
                 case 3:
                     System.out.println("\nEXIBIR DADOS PESSOAIS");
                     if (cliente != null) { 
-                        System.out.println("Nome: " + cliente.getNome());
-                        System.out.println("Senha: " + cliente.getEmail());
-                        System.out.println("Emial: " + cliente.getEmail());
-                        System.out.println("ID: " + cliente.getId());
-                        
+                        cliente.exibirDados(); //chamar o método "exibirDados" do objeto "cliente"
                     } else {
                         System.out.println("Cliente não cadastrado.");
                     }
@@ -130,5 +126,6 @@ public class Cliente {
 
         scanner.close();
     }
+
 
 }
