@@ -60,16 +60,14 @@ public class Vendedor {
 
     public static void opcaovendedor() {
         Scanner scanner = new Scanner(System.in);
-    
-        Vendedor vendedor = null; // Cria a variável de referência do tipo Vendedor
-    
         int opcao = 0;
+        Vendedor vendedor = null;
         do {
             System.out.println("Selecione uma opção:");
             System.out.println("1. Cadastrar vendedor");
             System.out.println("2. Visualizar vendedor");
             System.out.println("0 - Sair");
-    
+
             opcao = scanner.nextInt();
             scanner.nextLine();
             switch (opcao) {
@@ -104,9 +102,8 @@ public class Vendedor {
                     System.out.println("Opção inválida.");
                     break;
             }
-    
+
         } while (opcao != 0);
     }
-    
 
 }

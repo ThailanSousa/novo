@@ -80,7 +80,7 @@ public class Cliente {
         System.out.println("Email: " + getEmail());
         System.out.println("Senha: " + getSenha());
         System.out.println("ID: " + getId());
-    
+
     }
 
     public static void opcaoCliente() {
@@ -94,23 +94,22 @@ public class Cliente {
             System.out.println("3 - exibir dados pessoais");
             System.out.println("0 - Sair");
 
-            System.out.print("Digite uma opção: ");
             opcao = scanner.nextInt();
             scanner.nextLine();
 
             switch (opcao) {
                 case 1:
                     System.out.println("\nREALIZAR CADASTRO");
-                    cliente = Cliente.cadastro(); //atribuir novo cliente ao objeto cliente
+                    cliente = Cliente.cadastro(); // atribuir novo cliente ao objeto cliente
                     break;
                 case 2:
                     System.out.println("\nREALIZAR COMPRAS");
-                    Produto.produto();                  
+                    Produto.produto();
                     break;
                 case 3:
                     System.out.println("\nEXIBIR DADOS PESSOAIS");
-                    if (cliente != null) { 
-                        cliente.exibirDados(); //chamar o método "exibirDados" do objeto "cliente"
+                    if (cliente != null) {
+                        cliente.exibirDados(); // chamar o método "exibirDados" do objeto "cliente"
                     } else {
                         System.out.println("Cliente não cadastrado.");
                     }
@@ -124,8 +123,7 @@ public class Cliente {
             }
         } while (opcao != 0);
 
-        scanner.close();
+        
     }
-
 
 }
